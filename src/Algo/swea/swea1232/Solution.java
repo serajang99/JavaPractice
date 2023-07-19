@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class swea1232 {
+public class Solution {
 
 	static class Node {
 		int value; // 노드값

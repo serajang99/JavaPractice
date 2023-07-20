@@ -3,14 +3,22 @@ package Algo.boj.b15663;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import java.util.StringTokenizer;
+import java.util.TreeSet;
 
 public class Main {
 	static int[] arr;
 	static boolean[] visited;
 	static int N, M;
 	static int[] result;
+	static int[] before;
+	static LinkedHashSet<String> resultArr;
 
 	public static void main(String[] args) throws IOException {
 
@@ -28,14 +36,18 @@ public class Main {
 		Arrays.sort(arr);
 		visited = new boolean[N];
 		result = new int[M];
-
+		resultArr = new LinkedHashSet<String>();
 		recur(0);
-
+		resultArr.forEach(System.out::println);
 	}
 
 	private static void recur(int depth) {
+
 		if (depth == M) {
-			printResult();
+			StringBuilder sb = new StringBuilder();
+			for (int r : result)
+				sb.append(r).append(' ');
+			resultArr.add(sb.toString());
 			return;
 		}
 		for (int i = 0; i < arr.length; i++) {
@@ -48,10 +60,4 @@ public class Main {
 		}
 	}
 
-	private static void printResult() {
-		for (int i : result) {
-			System.out.print(i + " ");
-		}
-		System.out.println();
-	}
 }

@@ -1,6 +1,6 @@
-package syntax.day_06.service;
+package syntax.day_06;
 
-import day_06.service.MyShapeListService;
+import syntax.day_06.service.MyShapeListService;
 
 /** 자바 그림판 메인 테스트 클래스 */
 public class PainterServiceListExam {

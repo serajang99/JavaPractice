@@ -1,6 +1,8 @@
-package syntax.day_06;
+package syntax.day_06.service;
 
 import java.util.ArrayList;
+
+import syntax.day_06.MyShape;
 
 /** 도형들의 부모, 공통 변수, 메서드 정의 */
 public class MyShapeListService {
